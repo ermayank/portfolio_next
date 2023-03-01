@@ -1,5 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
+import links from "../links.json"
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
 
@@ -20,7 +21,7 @@ export default function Home() {
             <Link href="/">Mayank Gupta</Link>
           </h1>
           {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-          {/* <!-- <a href="index.html" className="mr-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"></a> --> */}
+
           <h2>
             I"m a passionate <span>Software Developer</span> from Canada
           </h2>
@@ -34,7 +35,7 @@ export default function Home() {
               </li>
               <li>
                 <Link className="nav-link" href="/about">
-                  About
+                  About Me
                 </Link>
               </li>
               <li>
@@ -43,8 +44,13 @@ export default function Home() {
                 </Link>
               </li>
               <li>
+                <Link className="nav-link" href="/projects">
+                  Projects
+                </Link>
+              </li>
+              <li>
                 <Link className="nav-link" href="/contact">
-                  Contact
+                  Contact Me
                 </Link>
               </li>
             </ul>
@@ -53,13 +59,13 @@ export default function Home() {
           {/* <!-- .navbar --> */}
 
           <div className="social-links">
-            <Link href="#" className="linkedin">
+            <Link href={links.linkedin} className="linkedin">
               <BsLinkedin />
             </Link>
-            <Link href="#" className="github">
+            <Link href={links.github} className="github">
               <BsGithub />
             </Link>
-            <Link href="#" className="instagram ">
+            <Link href={links.instagram} className="instagram ">
               <BsInstagram />
             </Link>
           </div>

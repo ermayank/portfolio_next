@@ -36,10 +36,10 @@ const resume = () => {
 
               <h3 className="resume-title">Education</h3>
               <div className="resume-item">
-                <h4>Master of Fine Arts & Graphic Design</h4>
-                <h5>2015 - 2016</h5>
+                <h4>MEngg. Electrical & Computer Engineering</h4>
+                <h5>2021 - 2023</h5>
                 <p>
-                  <em>Rochester Institute of Technology, Rochester, NY</em>
+                  <em>Concordia University, Montreal, CA</em>
                 </p>
                 <p>
                   Qui deserunt veniam. Et sed aliquam labore tempore sed
@@ -48,10 +48,10 @@ const resume = () => {
                 </p>
               </div>
               <div className="resume-item">
-                <h4>Bachelor of Fine Arts & Graphic Design</h4>
-                <h5>2010 - 2014</h5>
+                <h4>Bachelor of Technology Electrical Engineering</h4>
+                <h5>2016 - 2020</h5>
                 <p>
-                  <em>Rochester Institute of Technology, Rochester, NY</em>
+                  <em>D.C.R. University, Haryana, India</em>
                 </p>
                 <p>
                   Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
@@ -64,55 +64,57 @@ const resume = () => {
             <div className="col-lg-6">
               <h3 className="resume-title">Professional Experience</h3>
               <div className="resume-item">
-                <h4>Senior graphic design specialist</h4>
-                <h5>2019 - Present</h5>
+                <h4>Software Developer</h4>
+                <h5>May 2022 - Present</h5>
                 <p>
-                  <em>Experion, New York, NY </em>
+                  <em>Kaloom, Montreal, CA </em>
                 </p>
                 <p></p>
                 <ul>
                   <li>
-                    Lead in the design, development, and implementation of the
-                    graphic, layout, and production communication materials
+                    Working on Kaloom Test Framework (KTF) for creating test
+                    cases, live monitoring for running test cases for the
+                    product on test systems.
                   </li>
                   <li>
-                    Delegate tasks to the 7 members of the design team and
-                    provide counsel on all aspects of the project.{" "}
+                    Created multiple views for the real time visualisation for
+                    Internal Test Framework using Vue.js, Node.js and MongoDB
+                    and TypeScript.
                   </li>
                   <li>
-                    Supervise the assessment of all graphic materials in order
-                    to ensure quality and accuracy of the design
-                  </li>
-                  <li>
-                    Oversee the efficient use of production project budgets
-                    ranging from $2,000 - $25,000
+                    SDesigned and developed views for the dashing library in
+                    Docker Containerized Architecture environment by fetching
+                    data using RESTful APIs.
                   </li>
                 </ul>
                 <p></p>
               </div>
               <div className="resume-item">
-                <h4>Graphic design specialist</h4>
-                <h5>2017 - 2018</h5>
+                <h4>Full Stack Developer</h4>
+                <h5>Oct 2020 - Aug 2021</h5>
                 <p>
-                  <em>Stepping Stone Advertising, New York, NY</em>
+                  <em>WeExcel Technologies, Chandigarh, IN</em>
                 </p>
                 <p></p>
                 <ul>
                   <li>
-                    Developed numerous marketing programs (logos,
-                    brochures,infographics, presentations, and advertisements).
+                    Designed and implemented scalable APIs and background
+                    workers for managing first- and third-party proprietary
+                    licenses using NodeJS, Firebase Functions, and other cloud
+                    technologies that serve thousands of requests daily.
                   </li>
                   <li>
-                    Managed up to 5 projects or tasks at a given time while
-                    under pressure
+                    Reduced the loading time of website by 30% by removing
+                    unused assets.
                   </li>
                   <li>
-                    Recommended and consulted with clients on the most
-                    appropriate graphic design
+                    Automated and optimized business logic for the Advertisement
+                    Platform using salable cloud technologies on AWS.
                   </li>
                   <li>
-                    Created 4+ design presentations and proposals a month for
-                    clients and account managers
+                    Coordinated team of 5 individuals to develop the server
+                    architecture and increased Google Page Speed score to 98/100
+                    and optimised product for search engines.
                   </li>
                 </ul>
                 <p></p>

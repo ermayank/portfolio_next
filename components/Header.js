@@ -27,14 +27,10 @@ const Header = () => {
                   Resume
                 </Link>
               </li>
+
               <li>
-                <Link className="nav-link" href="/services">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/portfolio">
-                  Portfolio
+                <Link className="nav-link" href="/projects">
+                  Projects
                 </Link>
               </li>
               <li>
