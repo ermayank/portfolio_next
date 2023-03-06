@@ -46,7 +46,7 @@ const portfolio = ({ projects }) => {
               >
                 <div className="portfolio-wrap">
                   <Image
-                    src="/img/portfolio/portfolio-1.jpg"
+                    src={project.fields.fileLocation.stringValue}
                     className="img-fluid"
                     alt="Project Image"
                     width="800"
