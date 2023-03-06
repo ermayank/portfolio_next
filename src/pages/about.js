@@ -1,6 +1,22 @@
 import Head from "next/head"
 import Image from "next/image"
-import { FaReact } from "react-icons/fa"
+import {
+  SiJavascript,
+  SiMongodb,
+  SiTypescript,
+  SiFirebase,
+} from "react-icons/si"
+import {
+  FaNodeJs,
+  FaReact,
+  FaVuejs,
+  FaDocker,
+  FaJava,
+  FaLinux,
+  FaWordpress,
+} from "react-icons/fa"
+import { DiGit } from "react-icons/di"
+
 import Header from "../../components/Header"
 
 export default function About() {
@@ -38,10 +54,11 @@ export default function About() {
             <div className="col-lg-4" data-aos="fade-right">
               <Image
                 src={"/img/me.jpg"}
+                layout="responsive"
                 alt="Picture of the mayank gupta"
                 className="img-fluid"
-                width="350"
-                height="300"
+                width="600"
+                height="680"
               />
             </div>
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
@@ -104,10 +121,6 @@ export default function About() {
         </div>
         {/* <!-- End About Me --> */}
 
-        {/* <!-- ======= Counts ======= --> */}
-
-        {/* <!-- End Counts --> */}
-
         {/* <!-- ======= Interests ======= --> */}
         <div className="interests container">
           <div className="section-title">
@@ -118,103 +131,99 @@ export default function About() {
             <div className="col-lg-3 col-md-4">
               <div className="icon-box">
                 <i style={{ color: "#ffbb2c" }}>
-                  <FaReact />
+                  <SiJavascript />
                 </i>
 
-                <h3>ReactJs</h3>
+                <h3>JavaScript</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
               <div className="icon-box">
-                <i
-                  className="ri-bar-chart-box-line"
-                  style={{ color: "#5578ff" }}
-                ></i>
-                <h3>Dolor Sitema</h3>
+                <i style={{ color: "#5578ff" }}>
+                  <FaNodeJs />
+                </i>
+                <h3>Node.js</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
               <div className="icon-box">
-                <i
-                  className="ri-calendar-todo-line"
-                  style={{ color: "#e80368" }}
-                ></i>
-                <h3>Sed perspiciatis</h3>
+                <i style={{ color: "#e80368" }}>
+                  <FaReact />
+                </i>
+                <h3>React</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
               <div className="icon-box">
-                <i
-                  className="ri-paint-brush-line"
-                  style={{ color: "#e361ff" }}
-                ></i>
-                <h3>Magni Dolores</h3>
+                <i style={{ color: "#e361ff" }}>
+                  <SiMongodb />
+                </i>
+                <h3>MongoDB</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i
-                  className="ri-database-2-line"
-                  style={{ color: "#47aeff" }}
-                ></i>
-                <h3>Nemo Enim</h3>
+                <i style={{ color: "#47aeff" }}>
+                  <FaVuejs />
+                </i>
+                <h3>Vue.js</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i
-                  className="ri-gradienter-line"
-                  style={{ color: "#ffa76e" }}
-                ></i>
-                <h3>Eiusmod Tempor</h3>
+                <i style={{ color: "#ffa76e" }}>
+                  <FaDocker />
+                </i>
+                <h3>Docker</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i
-                  className="ri-file-list-3-line"
-                  style={{ color: "#11dbcf" }}
-                ></i>
-                <h3>Midela Teren</h3>
+                <i style={{ color: "#11dbcf" }}>
+                  <FaJava />
+                </i>
+                <h3>Java</h3>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-4 mt-4">
+              <div className="icon-box">
+                <i style={{ color: "#b2904f" }}>
+                  <SiTypescript />
+                </i>
+                <h3>TypeScript</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i
-                  className="ri-price-tag-2-line"
-                  style={{ color: "#4233ff" }}
-                ></i>
-                <h3>Pira Neve</h3>
+                <i style={{ color: "#b20969" }}>
+                  <DiGit />
+                </i>
+                <h3>Git</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i className="ri-anchor-line" style={{ color: "#b2904f" }}></i>
-                <h3>Dirada Pack</h3>
+                <i style={{ color: "#ff5828" }}>
+                  <FaLinux />
+                </i>
+                <h3>Linux</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i className="ri-disc-line" style={{ color: "#b20969" }}></i>
-                <h3>Moton Ideal</h3>
+                <i style={{ color: "#29cc61" }}>
+                  <FaWordpress />
+                </i>
+                <h3>Wordpress</h3>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i
-                  className="ri-base-station-line"
-                  style={{ color: "#ff5828" }}
-                ></i>
-                <h3>Verdo Park</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i
-                  className="ri-fingerprint-line"
-                  style={{ color: "#29cc61" }}
-                ></i>
-                <h3>Flavor Nivelanda</h3>
+                <i style={{ color: "#29cc61" }}>
+                  <SiFirebase />
+                </i>
+                <h3>Firebase</h3>
               </div>
             </div>
           </div>

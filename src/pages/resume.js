@@ -53,12 +53,18 @@ const resume = () => {
                 <p>
                   <em>D.C.R. University, Haryana, India</em>
                 </p>
-                <p>
-                  Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-                  reiciendis et quis Eius vel ratione eius unde vitae rerum
-                  voluptates asperiores voluptatem Earum molestiae consequatur
-                  neque etlon sader mart dila
-                </p>
+
+                <ul>
+                  <li>
+                    I spent the best 4 years and this university has transformed
+                    me into a new and better version of myself, technically,
+                    physically and mentally.
+                  </li>
+                  <li>
+                    I was not only the part of extra-curricular and sports
+                    events but also got various shots for organizing them.
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-lg-6">
@@ -115,6 +121,26 @@ const resume = () => {
                     Coordinated team of 5 individuals to develop the server
                     architecture and increased Google Page Speed score to 98/100
                     and optimised product for search engines.
+                  </li>
+                </ul>
+                <p></p>
+              </div>
+
+              <div className="resume-item">
+                <h4>Software Developer Intern</h4>
+                <h5>April 2020 - August 2020</h5>
+                <p>
+                  <em>Calinfo, Kurukshetra, IN</em>
+                </p>
+                <p></p>
+                <ul>
+                  <li>
+                    Managed weekly email marketing campaigns for 14000+ users
+                    which resulted in increase in revenue by 10%.
+                  </li>
+                  <li>
+                    Reduced the loading time of website by 30% by removing
+                    unused assets.
                   </li>
                 </ul>
                 <p></p>
