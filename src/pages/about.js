@@ -53,7 +53,7 @@ export default function About() {
           <div className="row">
             <div className="col-lg-4" data-aos="fade-right">
               <Image
-                src={"/img/me.jpg"}
+                src={"/img/about_mayank_portfolio.png"}
                 layout="responsive"
                 alt="Picture of the mayank gupta"
                 className="img-fluid"
@@ -139,7 +139,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
               <div className="icon-box">
-                <i style={{ color: "#5578ff" }}>
+                <i style={{ color: "#3C873A" }}>
                   <FaNodeJs />
                 </i>
                 <h3>Node.js</h3>
@@ -147,7 +147,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
               <div className="icon-box">
-                <i style={{ color: "#e80368" }}>
+                <i style={{ color: "#61DBFB" }}>
                   <FaReact />
                 </i>
                 <h3>React</h3>
@@ -155,7 +155,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
               <div className="icon-box">
-                <i style={{ color: "#e361ff" }}>
+                <i style={{ color: "#589636" }}>
                   <SiMongodb />
                 </i>
                 <h3>MongoDB</h3>
@@ -163,7 +163,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#47aeff" }}>
+                <i style={{ color: "#589636" }}>
                   <FaVuejs />
                 </i>
                 <h3>Vue.js</h3>
@@ -171,7 +171,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#ffa76e" }}>
+                <i style={{ color: "#0db7ed" }}>
                   <FaDocker />
                 </i>
                 <h3>Docker</h3>
@@ -179,7 +179,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#11dbcf" }}>
+                <i style={{ color: "#f89820" }}>
                   <FaJava />
                 </i>
                 <h3>Java</h3>
@@ -188,7 +188,7 @@ export default function About() {
 
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#b2904f" }}>
+                <i style={{ color: "#007acc" }}>
                   <SiTypescript />
                 </i>
                 <h3>TypeScript</h3>
@@ -196,7 +196,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#b20969" }}>
+                <i style={{ color: "#F1502F" }}>
                   <DiGit />
                 </i>
                 <h3>Git</h3>
@@ -204,7 +204,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#ff5828" }}>
+                <i style={{ color: "#FFFFFF" }}>
                   <FaLinux />
                 </i>
                 <h3>Linux</h3>

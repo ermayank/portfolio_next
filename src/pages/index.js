@@ -3,6 +3,7 @@ import Link from "next/link"
 import links from "../links.json"
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
+import { FaGooglePlay } from "react-icons/fa"
 
 export default function Home() {
   return (
@@ -67,6 +68,9 @@ export default function Home() {
             </Link>
             <Link href={links.instagram} className="instagram ">
               <BsInstagram />
+            </Link>
+            <Link href={links.playStore} className="instagram ">
+              <FaGooglePlay />
             </Link>
           </div>
         </div>

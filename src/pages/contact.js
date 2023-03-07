@@ -10,6 +10,7 @@ import {
   BsShareFill,
 } from "react-icons/bs"
 import Header from "../../components/Header"
+import links from "../links.json"
 const contact = () => {
   return (
     <>
@@ -27,7 +28,6 @@ const contact = () => {
                 <i style={{ color: "#ffbb2c" }}>
                   <AiTwotoneMail />
                 </i>
-
                 <h3>My Address</h3>
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
@@ -40,19 +40,19 @@ const contact = () => {
                 </i>
                 <h3>Social Profiles</h3>
                 <div className="social-links">
-                  <Link href="#">
+                  <Link href={links.linkedin}>
                     <BsLinkedin />
                   </Link>
-                  <Link href="#">
+                  <Link href={links.github}>
                     <BsGithub />
                   </Link>
-                  <Link href="#">
+                  <Link href={links.instagram}>
                     <BsInstagram />
                   </Link>
-                  <Link href="#">
+                  <Link href={links.facebook}>
                     <BsFacebook />
                   </Link>
-                  <Link href="#">
+                  <Link href={links.twitter}>
                     <BsTwitter />
                   </Link>
                 </div>
