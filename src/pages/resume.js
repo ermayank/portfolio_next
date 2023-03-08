@@ -16,20 +16,22 @@ const resume = () => {
             <div className="col-lg-6">
               <h3 className="resume-title">Sumary</h3>
               <div className="resume-item pb-0">
-                <h4>Alice Barkley</h4>
+                <h4>Full Stack Development</h4>
                 <p>
                   <em>
-                    Innovative and deadline-driven Graphic Designer with 3+
-                    years of experience designing and developing user-centered
-                    digital/print marketing material from initial concept to
-                    final, polished deliverable.
+                    My services includes the FullStack Website development and
+                    are adaptive to the requirments of the project. I like to
+                    work with the JavaScript stack mainly Nodejs, React, and
+                    MongoDB but I am open to various opportunities and different
+                    technologies to learn and work with.
                   </em>
                 </p>
                 <p></p>
                 <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
+                  <li>Full Stack Development</li>
+                  <li>Software Development</li>
+                  <li>Online Marketing</li>
+                  <li>Software Consultation</li>
                 </ul>
                 <p></p>
               </div>
@@ -42,9 +44,12 @@ const resume = () => {
                   <em>Concordia University, Montreal, CA</em>
                 </p>
                 <p>
-                  Qui deserunt veniam. Et sed aliquam labore tempore sed
-                  quisquam iusto autem sit. Ea vero voluptatum qui ut
-                  dignissimos deleniti nerada porti sand markend
+                  Obtaining a master's degree was a significant milestone in my
+                  personal and professional growth. Beyond the academic
+                  achievements, pursuing a master's degree involves a great deal
+                  of dedication, hard work, and time management. These qualities
+                  are transferable to personal growth, which can continue after
+                  completing the degree.
                 </p>
               </div>
               <div className="resume-item">

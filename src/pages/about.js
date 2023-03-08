@@ -18,6 +18,7 @@ import {
 import { DiGit } from "react-icons/di"
 
 import Header from "../../components/Header"
+import Link from "next/link"
 
 export default function About() {
   let currentAge
@@ -70,20 +71,20 @@ export default function About() {
                 <div className="col-lg-6">
                   <ul>
                     <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Birthday:</strong> <span>29 August</span>
+                      <i className="bi bi-chevron-right"></i>
+                      <strong>Website:</strong>
+                      <span>
+                        <Link href="/" className="about_link">
+                          www.mayankgupta.tech
+                        </Link>
+                      </span>
                     </li>
                     <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Website:</strong>{" "}
-                      <span>www.mayankgupta.tech</span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
+                      <i className="bi bi-chevron-right"></i>
                       <strong>Languages:</strong> <span>English, Hindi</span>
                     </li>
                     <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
+                      <i className="bi bi-chevron-right"></i>
                       <strong>City:</strong> <span>Montreal, CA</span>
                     </li>
                   </ul>
@@ -91,30 +92,53 @@ export default function About() {
                 <div className="col-lg-6">
                   <ul>
                     <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
-                      <strong>Age:</strong> <span>{currentAge}</span>
+                      <i className="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong> <span>Post Graduation</span>
                     </li>
                     <li>
                       <i className="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong> <span>Master</span>
-                    </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>
-                      <strong>Email:</strong>{" "}
+                      <strong>Email:</strong>
                       <span>mayank.pkgupta@outlook.com</span>
                     </li>
                     <li>
-                      <i className="bi bi-chevron-right"></i>{" "}
+                      <i className="bi bi-chevron-right"></i>
                       <strong>Freelance:</strong> <span>Available</span>
                     </li>
                   </ul>
                 </div>
               </div>
               <p>
-                I'm a Canada based full stack web developer & Electrical
-                Engineer by education focused on crafting clean & user‑friendly
-                experiences, I am passionate about building excellent software
-                that improves the lives of those around me.
+                I am a passionate FullStack Software Development Engineer with
+                hands-on experience in creating web applications in personal,
+                academic and professional environments using Agile
+                methodologies. I'm also familiar with AWS cloud practices with
+                sufficient knowledge of cloud technologies. While I was enrolled
+                in the Master of Engineering in Gina Cody School of Computing
+                program at Concordia University, Montreal, Canada. I worked on
+                several academic projects involving diversity of technologies
+                from the topic areas such as Programming on Cloud, Neural
+                Networks, and Software Testing and Validation.
+              </p>
+              <p>
+                As a Full Stack Web Developer, I have the skills and knowledge
+                necessary to create and maintain complex web applications. My
+                expertise extends to both the client-side and server-side
+                components of a web application, and I am comfortable working
+                with a range of programming languages and technologies.
+              </p>
+              <p>
+                In addition to my technical skills, I am also adept at working
+                collaboratively with other members of a development team. I am
+                comfortable working with project managers, designers, and other
+                developers to ensure that the web applications I create meet the
+                needs of all stakeholders. Overall, my expertise as a Full Stack
+                Web Developer allows me to create robust, scalable, and
+                user-friendly web applications that provide value to businesses
+                and end-users alike.
+              </p>
+              <p>
+                Please don’t hesitate to contact me over the over the platform
+                you love and I’ll try to get back to you as soon as possible.
               </p>
             </div>
           </div>
@@ -212,7 +236,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#29cc61" }}>
+                <i style={{ color: "#00749C" }}>
                   <FaWordpress />
                 </i>
                 <h3>Wordpress</h3>
@@ -220,7 +244,7 @@ export default function About() {
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
-                <i style={{ color: "#29cc61" }}>
+                <i style={{ color: "#F5820D" }}>
                   <SiFirebase />
                 </i>
                 <h3>Firebase</h3>

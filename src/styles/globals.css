@@ -104,17 +104,17 @@ h6 {
 }
 
 #header .social-links a {
-  font-size: 16px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: #000000;
   color: #fff;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 #header .social-links a:hover {
@@ -431,6 +431,13 @@ section .container {
 .about-me p,
 ul {
   color: #fff;
+}
+.about_link {
+  text-decoration: none;
+  color: #eee;
+}
+.about_link:hover {
+  color: #15bb62;
 }
 
 /*--------------------------------------------------------------
@@ -1010,10 +1017,11 @@ ul {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.contact .info-box i.bx {
+.contact .info-box i {
   font-size: 24px;
   color: #18d26e;
   border-radius: 50%;
+  line-height: 1;
   padding: 14px;
   float: left;
   background: rgba(255, 255, 255, 0.1);
@@ -1040,12 +1048,16 @@ ul {
 }
 
 .contact .info-box .social-links a {
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   color: #fff;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
+  border-radius: 50%;
+  line-height: 1;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .contact .info-box .social-links a:hover {
@@ -1147,6 +1159,22 @@ ul {
 .contact .php-email-form button[type="submit"]:hover {
   background: #15bb62;
 }
+.content-contact {
+  color: white;
+  font-size: large;
+}
+
+.message_after_submission p {
+  color: #eee;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 2rem;
+}
+.message_after_submission i {
+  color: #eee;
+  text-align: center;
+  padding-left: 10px;
+}
 
 @-webkit-keyframes animate-loading {
   0% {
@@ -1166,36 +1194,4 @@ ul {
   100% {
     transform: rotate(360deg);
   }
-}
-
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 15px;
-  text-align: right;
-  font-size: 13px;
-  color: #fff;
-  z-index: 999999;
-}
-
-@media (max-width: 992px) {
-  .credits {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-  }
-}
-
-.credits a {
-  color: #18d26e;
-  transition: 0.3s;
-}
-
-.credits a:hover {
-  color: #fff;
 }

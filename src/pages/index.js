@@ -1,8 +1,10 @@
 import Head from "next/head"
 import Link from "next/link"
 import links from "../links.json"
+import HeaderIndex from "../../components/HeaderIndex"
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
+import { BiLinkExternal } from "react-icons/bi"
 import { FaGooglePlay } from "react-icons/fa"
 
 export default function Home() {
@@ -18,15 +20,13 @@ export default function Home() {
       {/* <!-- ======= Header ======= --> */}
       <header id="header">
         <div className="container">
+          <HeaderIndex />
           <h1>
             <Link href="/">Mayank Gupta</Link>
           </h1>
-          {/* <!-- Uncomment below if you prefer to use an image logo --> */}
-
           <h2>
             I"m a passionate <span>Software Developer</span> from Canada
           </h2>
-
           <nav id="navbar" className="navbar">
             <ul>
               <li>
@@ -54,22 +54,32 @@ export default function Home() {
                   Contact Me
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="nav-link"
+                  target="parent"
+                  href="https://blog.mayankgupta.tech/"
+                >
+                  My Blog &nbsp;
+                  <BiLinkExternal />
+                </Link>
+              </li>
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>
           {/* <!-- .navbar --> */}
 
           <div className="social-links">
-            <Link href={links.linkedin} className="linkedin">
+            <Link href={links.linkedin} title="linkedin">
               <BsLinkedin />
             </Link>
-            <Link href={links.github} className="github">
+            <Link href={links.github} title="github">
               <BsGithub />
             </Link>
-            <Link href={links.instagram} className="instagram ">
+            <Link href={links.instagram} title="instagram ">
               <BsInstagram />
             </Link>
-            <Link href={links.playStore} className="instagram ">
+            <Link href={links.playStore} title="instagram ">
               <FaGooglePlay />
             </Link>
           </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { HiMenu } from "react-icons/hi"
+import NavLinks from "./NavLinks"
 
 const Header = () => {
   return (
@@ -10,37 +10,7 @@ const Header = () => {
           <h1>
             <Link href="/">Mayank Gupta</Link>
           </h1>
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>
-                <Link className="nav-link" href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/about">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/resume">
-                  Resume
-                </Link>
-              </li>
-
-              <li>
-                <Link className="nav-link" href="/projects">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-            <HiMenu className="mobile-nav-toggle" />
-          </nav>
+          <NavLinks />
         </div>
       </header>
     </>
