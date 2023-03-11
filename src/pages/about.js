@@ -16,8 +16,7 @@ import {
   FaWordpress,
 } from "react-icons/fa"
 import { DiGit } from "react-icons/di"
-
-import Header from "../../components/Header"
+import Header from "../components/Header"
 import Link from "next/link"
 
 export default function About() {
@@ -55,7 +54,7 @@ export default function About() {
             <div className="col-lg-4" data-aos="fade-right">
               <Image
                 src={"/img/about_mayank_portfolio.png"}
-                layout="responsive"
+               
                 alt="Picture of the mayank gupta"
                 className="img-fluid"
                 width="600"

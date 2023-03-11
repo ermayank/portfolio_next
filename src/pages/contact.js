@@ -10,7 +10,7 @@ import {
   BsShareFill,
 } from "react-icons/bs"
 import { FaThumbsUp } from "react-icons/fa"
-import Header from "../../components/Header"
+import Header from "../components/Header"
 import links from "../links.json"
 import { useForm, ValidationError } from "@formspree/react"
 const contact = () => {
@@ -188,7 +188,7 @@ const contact = () => {
               ></textarea>
             </div>
 
-            <div className="text-center">
+            <div className="text-center my-2">
               <button type="submit" disabled={state.submitting}>
                 Send Message
               </button>

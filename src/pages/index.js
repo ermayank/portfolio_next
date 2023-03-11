@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import links from "../links.json"
-import HeaderIndex from "../../components/HeaderIndex"
+import HeaderIndex from "../components/HeaderIndex"
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
 import { BiLinkExternal } from "react-icons/bi"
@@ -20,66 +20,25 @@ export default function Home() {
       {/* <!-- ======= Header ======= --> */}
       <header id="header">
         <div className="container">
-          <HeaderIndex />
           <h1>
             <Link href="/">Mayank Gupta</Link>
           </h1>
           <h2>
             I"m a passionate <span>Software Developer</span> from Canada
           </h2>
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>
-                <Link className="nav-link active" href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/about">
-                  About Me
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/resume">
-                  Resume
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/projects">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" href="/contact">
-                  Contact Me
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="nav-link"
-                  target="parent"
-                  href="https://blog.mayankgupta.tech/"
-                >
-                  My Blog &nbsp;
-                  <BiLinkExternal />
-                </Link>
-              </li>
-            </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-          {/* <!-- .navbar --> */}
+          <HeaderIndex />
 
           <div className="social-links">
-            <Link href={links.linkedin} title="linkedin">
+            <Link href={links.linkedin} title="Linkedin">
               <BsLinkedin />
             </Link>
-            <Link href={links.github} title="github">
+            <Link href={links.github} title="Github">
               <BsGithub />
             </Link>
-            <Link href={links.instagram} title="instagram ">
+            <Link href={links.instagram} title="Instagram">
               <BsInstagram />
             </Link>
-            <Link href={links.playStore} title="instagram ">
+            <Link href={links.playStore} title="Google Play Store ">
               <FaGooglePlay />
             </Link>
           </div>
