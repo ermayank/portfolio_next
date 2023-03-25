@@ -53,8 +53,7 @@ export default function About() {
           <div className="row">
             <div className="col-lg-4" data-aos="fade-right">
               <Image
-                src={"/img/about_mayank_portfolio.png"}
-               
+                src={"/img/me_about.png"}
                 alt="Picture of the mayank gupta"
                 className="img-fluid"
                 width="600"
