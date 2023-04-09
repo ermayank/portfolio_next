@@ -1,6 +1,5 @@
 import React from "react"
 import Header from "../components/Header"
-import Image from "next/image"
 import { BsGithub, BsLink45Deg } from "react-icons/bs"
 
 export const getStaticProps = async () => {
@@ -45,7 +44,7 @@ const portfolio = ({ projects }) => {
                 key={project.createTime}
               >
                 <div className="portfolio-wrap">
-                  <Image
+                  <img
                     src={project.fields.fileLocation.stringValue}
                     className="img-fluid"
                     alt="Project Image"
