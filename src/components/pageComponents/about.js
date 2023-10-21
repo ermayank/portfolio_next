@@ -1,11 +1,14 @@
-import Head from "next/head"
-import Image from "next/image"
+import Head from "next/head";
+import Image from "next/image";
+import links from "../../staticData/links.json";
+import { color, motion } from "framer-motion";
+
 import {
   SiJavascript,
   SiMongodb,
   SiTypescript,
   SiFirebase,
-} from "react-icons/si"
+} from "react-icons/si";
 import {
   FaNodeJs,
   FaReact,
@@ -14,20 +17,31 @@ import {
   FaJava,
   FaLinux,
   FaWordpress,
-} from "react-icons/fa"
-import { DiGit } from "react-icons/di"
-import Header from "../components/Header"
-import Link from "next/link"
+} from "react-icons/fa";
+import { DiGit } from "react-icons/di";
+
+import Link from "next/link";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export default function About() {
-  let currentAge
-  const year = new Date().getFullYear()
-  const month = new Date().getMonth()
+  let currentAge;
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth();
 
   if (month <= 8) {
-    currentAge = year - 1998 - 1
+    currentAge = year - 1998 - 1;
   } else {
-    currentAge = year - 1998
+    currentAge = year - 1998;
   }
   return (
     <>
@@ -40,10 +54,10 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+
       {/* <!-- ======= About Section ======= --> */}
-      <section id="about" className="about section-show">
-        {/* <!-- ======= About Me ======= --> */}
+
+      <div className="page-container" id="about-section">
         <div className="about-me container">
           <div className="section-title">
             <h2>About</h2>
@@ -60,8 +74,11 @@ export default function About() {
                 height="680"
               />
             </div>
+
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>Full Stack Software Developer</h3>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
+                <h3>Full Stack Software Developer</h3>
+              </motion.div>
               <p className="fst-italic">
                 Creating Innovation for Everyday people around me
               </p>
@@ -79,7 +96,8 @@ export default function About() {
                     </li>
                     <li>
                       <i className="bi bi-chevron-right"></i>
-                      <strong>Languages:</strong> <span>English, Hindi</span>
+                      <strong>Languages:</strong>
+                      <span>English, Hindi, Français (débutant)</span>
                     </li>
                     <li>
                       <i className="bi bi-chevron-right"></i>
@@ -96,7 +114,7 @@ export default function About() {
                     <li>
                       <i className="bi bi-chevron-right"></i>
                       <strong>Email:</strong>
-                      <span>mayank.pkgupta@outlook.com</span>
+                      <span>{links.email}</span>
                     </li>
                     <li>
                       <i className="bi bi-chevron-right"></i>
@@ -135,8 +153,8 @@ export default function About() {
                 and end-users alike.
               </p>
               <p>
-                Please don’t hesitate to contact me over the over the platform
-                you love and I’ll try to get back to you as soon as possible.
+                Please don't hesitate to contact me over the over the platform
+                you love and I'll try to get back to you as soon as possible.
               </p>
             </div>
           </div>
@@ -168,20 +186,39 @@ export default function About() {
               </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div className="icon-box">
+              <motion.div
+                className="icon-box"
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                animate="animate"
+                whileInView="animate"
+                // viewport={{
+                //   once: true,
+                // }}
+              >
                 <i style={{ color: "#61DBFB" }}>
                   <FaReact />
                 </i>
                 <h3>React</h3>
-              </div>
+              </motion.div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
-              <div className="icon-box">
+              <motion.div
+                className="icon-box"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0,
+                }}
+                drag="x"
+                dragConstraints={{ left: -100, right: 100 }}
+              >
                 <i style={{ color: "#589636" }}>
                   <SiMongodb />
                 </i>
                 <h3>MongoDB</h3>
-              </div>
+              </motion.div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4">
               <div className="icon-box">
@@ -250,13 +287,14 @@ export default function About() {
             </div>
           </div>
         </div>
-        {/* <!-- End Interests --> */}
+      </div>
+      {/* <!-- End Interests --> */}
 
-        {/* <!-- ======= Testimonials ======= --> */}
+      {/* <!-- ======= Testimonials ======= --> */}
 
-        {/* <!-- End Testimonials  --> */}
-      </section>
+      {/* <!-- End Testimonials  --> */}
+      {/* </section> */}
       {/* <!-- End About Section --> */}
     </>
-  )
+  );
 }

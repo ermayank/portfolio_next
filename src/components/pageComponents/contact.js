@@ -1,6 +1,6 @@
-import Link from "next/link"
-import React from "react"
-import { HiOutlineLocationMarker } from "react-icons/hi"
+import Link from "next/link";
+import React from "react";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   BsLinkedin,
   BsGithub,
@@ -8,19 +8,18 @@ import {
   BsFacebook,
   BsTwitter,
   BsShareFill,
-} from "react-icons/bs"
-import { FaThumbsUp } from "react-icons/fa"
-import Header from "../components/Header"
-import links from "../links.json"
-import { useForm, ValidationError } from "@formspree/react"
+} from "react-icons/bs";
+import { FaThumbsUp } from "react-icons/fa";
+
+import links from "../../staticData/links.json";
+import { useForm, ValidationError } from "@formspree/react";
 const contact = () => {
-  const [state, handleSubmit] = useForm("mdopqozl")
+  const [state, handleSubmit] = useForm("mdopqozl");
 
   if (state.succeeded) {
     return (
       <>
-        <Header />
-        <section id="contact" className="contact section-show">
+        <div id="contact" className="contact page-container">
           <div className="container">
             <div className="section-title">
               <h2>Contact</h2>
@@ -80,15 +79,14 @@ const contact = () => {
               </p>
             </div>
           </div>
-        </section>
+        </div>
       </>
-    )
+    );
   }
 
   return (
     <>
-      <Header />
-      <section id="contact" className="contact section-show">
+      <div id="contact" className="contact page-container">
         <div className="container">
           <div className="section-title">
             <h2>Contact</h2>
@@ -196,9 +194,9 @@ const contact = () => {
             </div>
           </form>
         </div>
-      </section>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default contact
+export default contact;

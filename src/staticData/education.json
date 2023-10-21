@@ -1,0 +1,41 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "degree": "MEngg. | Electrical & Computer Engineering",
+      "startDate": "Sep 2021",
+      "endDate": "April 2023",
+      "institution": "Concordia University",
+      "instituteWebsiteLink": "https://www.concordia.ca/",
+      "location": "Montreal, CA",
+      "logo": {
+        "image_link": "/img/concordia.webp",
+        "width": "250",
+        "height": "200",
+        "alt_text": "Concordia University Logo"
+      },
+      "description": [
+        "Obtaining a master's degree was a significant milestone in my personal and professional growth. Beyond the academic achievements, pursuing a master's degree involves a great deal of dedication, hard work, and time management."
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor of Technology | Electrical Engineering",
+      "startDate": "May 2016",
+      "endDate": "August 2020",
+      "institution": "D.C.R.U.S.T",
+      "instituteWebsiteLink": "https://www.dcrustm.ac.in/",
+      "location": "Haryana, IN",
+      "logo": {
+        "image_link": "/img/dcrust.jpeg",
+        "width": "100",
+        "height": "150",
+        "alt_text": "DCRUST University Logo"
+      },
+      "description": [
+        "I spent the best 4 years and this university has transformed me into a new and better version of myself, technically, physically and mentally.",
+        "I was not only the part of extra-curricular and sports events but also got various shots for organizing them."
+      ]
+    }
+  ]
+}

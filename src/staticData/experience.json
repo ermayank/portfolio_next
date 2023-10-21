@@ -1,0 +1,61 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Software Developer",
+      "startDate": "July 2023",
+      "endDate": "Present",
+      "company": "Avid Technology",
+      "location": "Montreal, CA",
+      "logo": {
+        "image_link": "/img/avid.png",
+        "width": "120",
+        "height": "150",
+        "alt_text": "Avid Company Logo"
+      },
+      "description": [
+        "Crafting and developing scalable user mobile applications using flutter.",
+        "Developing backend scalable microservices using Nodejs, Typescript, Docker and graphql."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Full Stack Software Developer",
+      "startDate": "May 2022",
+      "endDate": "June 2023",
+      "company": "Kaloom Networking",
+      "location": "Montreal, CA",
+      "logo": {
+        "image_link": "/img/kaloom.png",
+        "width": "150",
+        "height": "150",
+        "alt_text": "Kaloom Company Logo"
+      },
+      "description": [
+        "Working on Kaloom Test Framework (KTF) for creating test cases, live monitoring for running test cases for the product on test systems.",
+        "Created multiple views for the real time visualisation for Internal Test Framework using Vue.js, Node.js and MongoDB and TypeScript.",
+        "Designed and developed views for the dashing library in Docker Containerized Architecture environment by fetching data using RESTful APIs."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Full Stack Developer",
+      "startDate": "Oct 2020",
+      "endDate": "Aug 2021",
+      "company": "WeExcel Technologies",
+      "location": "Chandigarh, IN",
+      "logo": {
+        "image_link": "/img/weexcel.png",
+        "width": "100",
+        "height": "150",
+        "alt_text": "WeExcel Company Logo"
+      },
+      "description": [
+        "Designed and implemented scalable APIs and background workers for managing first- and third-party proprietary licenses using NodeJS, Firebase Functions, and other cloud technologies that serve thousands of requests daily.",
+        "Reduced the loading time of website by 30% by removing unused assets.",
+        "Automated and optimized business logic for the Advertisement Platform using salable cloud technologies on AWS.",
+        "Coordinated team of 5 individuals to develop the server architecture and increased Google Page Speed score to 98/100 and optimised product for search engines."
+      ]
+    }
+  ]
+}

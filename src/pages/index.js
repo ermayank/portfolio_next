@@ -1,11 +1,15 @@
-import Head from "next/head"
-import Link from "next/link"
-import links from "../links.json"
-import HeaderIndex from "../components/HeaderIndex"
+import Head from "next/head";
+import Link from "next/link";
+import links from "../staticData/links.json";
 
-import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
-import { BiLinkExternal } from "react-icons/bi"
-import { FaGooglePlay } from "react-icons/fa"
+import About from "../components/pageComponents/about.js";
+import Resume from "../components/pageComponents/resume";
+import Portfolio from "./projects";
+import Contact from "../components/pageComponents/contact";
+import Footer from "@/components/Footer";
+
+import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
+import { FaGooglePlay } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -24,9 +28,10 @@ export default function Home() {
             <Link href="/">Mayank Gupta</Link>
           </h1>
           <h2>
-            I"m a passionate <span>Software Developer</span> from Canada
+            Coding Creativity, Crafting Solutions:{" "}
+            <span>Explore My Digital Journey!</span>
           </h2>
-          <HeaderIndex />
+          {/* <HeaderIndex /> */}
 
           <div className="social-links">
             <Link href={links.linkedin} title="Linkedin">
@@ -45,6 +50,13 @@ export default function Home() {
         </div>
       </header>
       {/* <!-- End Header --> */}
+
+      <About />
+      <Resume />
+      <Portfolio />
+      {/* <Loading /> */}
+      <Contact />
+      <Footer />
     </>
-  )
+  );
 }
