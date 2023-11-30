@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
-const path = require("path");
+// import { join } from "path"
+import path from "path"
 
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    // includePaths: [path.join(__dirname, "styles")],
   },
   env: {
     BASE_URL: process.env.BASE_URL,
@@ -12,6 +13,6 @@ const nextConfig = {
   images: {
     domains: ["firebasestorage.googleapis.com"],
   },
-};
+}
 
-module.exports = nextConfig;
+export default nextConfig

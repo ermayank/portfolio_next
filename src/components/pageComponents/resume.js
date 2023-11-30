@@ -1,9 +1,9 @@
-import React from "react";
-import resumeData from "../../staticData/experience.json";
-import educationData from "../../staticData/education.json";
-import Link from "next/link";
-import Image from "next/image";
-import { color, motion } from "framer-motion";
+import React from "react"
+import resumeData from "../../staticData/experience.json"
+import educationData from "../../staticData/education.json"
+import Link from "next/link"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 const resume = () => {
   return (
@@ -17,30 +17,7 @@ const resume = () => {
 
           <div className="row">
             <div className="col-lg-6">
-              {/* <h3 className="resume-title">Sumary</h3> */}
-              {/* <div className="resume-item pb-0">
-                <h4>Full Stack Software Development</h4>
-                <p>
-                  <em>
-                    My services includes the FullStack Website development and
-                    are adaptive to the requirments of the project. I like to
-                    work with the JavaScript stack mainly Nodejs, React, and
-                    MongoDB but I am open to various opportunities and different
-                    technologies to learn and work with.
-                  </em>
-                </p>
-                <p></p>
-                <ul>
-                  <li>Full Stack Development</li>
-                  <li>Software Development</li>
-                  <li>Online Marketing</li>
-                  <li>Software Consultation</li>
-                  <li>Mobile Development</li>
-                </ul>
-                <p></p>
-              </div> */}
               <h3 className="resume-title">Education</h3>
-
               {educationData.education.map((edu) => (
                 <motion.div
                   className="resume-item"
@@ -72,7 +49,7 @@ const resume = () => {
                   <p></p>
                   <ul>
                     {edu.description.map((eduPoint) => (
-                      <li>{eduPoint}</li>
+                      <li key={Math.random()}>{eduPoint}</li>
                     ))}
                   </ul>
                   <p></p>
@@ -108,7 +85,7 @@ const resume = () => {
                   <p></p>
                   <ul>
                     {exp.description.map((expPoint) => (
-                      <li>{expPoint}</li>
+                      <li key={Math.random()}>{expPoint}</li>
                     ))}
                   </ul>
                   <p></p>
@@ -119,7 +96,7 @@ const resume = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default resume;
+export default resume

@@ -131,6 +131,9 @@ body {
     z-index: -1;
   }
 }
+.remove_link_decoration {
+  text-decoration: none;
+}
 a {
   color: $color_2;
   text-decoration: none;
@@ -1257,6 +1260,9 @@ ul {
 }
 
 .portfolio-details {
+  .project_details_page_link {
+    text-decoration: none;
+  }
   .project-image {
     align-content: center;
   }
@@ -1277,6 +1283,21 @@ ul {
       margin: 5px 5px 5px 5px;
       text-align: center;
       text-transform: capitalize;
+    }
+  }
+  .additional_files {
+    margin-top: 5vh;
+
+    h3 {
+      color: $color_2;
+    }
+    .icon-box {
+      color: white;
+      font-weight: bolder;
+      text-transform: capitalize;
+    }
+    .additional_file_div {
+      margin: 2px;
     }
   }
 }

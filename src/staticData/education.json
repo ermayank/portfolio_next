@@ -1,7 +1,7 @@
 {
   "education": [
     {
-      "id": 1,
+      "id": "1",
       "degree": "MEngg. | Electrical & Computer Engineering",
       "startDate": "Sep 2021",
       "endDate": "April 2023",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "degree": "Bachelor of Technology | Electrical Engineering",
       "startDate": "May 2016",
       "endDate": "August 2020",

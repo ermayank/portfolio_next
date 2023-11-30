@@ -1,25 +1,26 @@
-import { React, useEffect, useState } from "react";
-import Loading from "../../components/utils/LoadingUtil";
-import Link from "next/link";
+import { React, useEffect, useState } from "react"
+import Loading from "../../components/utils/LoadingUtil"
+import Link from "next/link"
 
-import { BsGithub, BsLink45Deg } from "react-icons/bs";
+import { BsGithub, BsLink45Deg } from "react-icons/bs"
+import addData from "../../add_data"
 
 const portfolio = () => {
-  const [loading, setLoading] = useState(true);
-  const [projectData, setProjectData] = useState([]);
+  const [loading, setLoading] = useState(true)
+  const [projectData, setProjectData] = useState([])
 
   const fetchProjects = async () => {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
-    const url = process.env.NEXT_PUBLIC_URL;
-    const res = await fetch(url);
-    const data = await res.json();
-    setProjectData(data.documents);
-    setLoading(false);
-  };
+    const url = process.env["NEXT_PUBLIC_URL"]
+    const res = await fetch(url)
+    const data = await res.json()
+    setProjectData(data.documents)
+    setLoading(false)
+  }
 
   useEffect(() => {
-    fetchProjects();
-  }, []);
+    fetchProjects()
+  }, [])
 
   return (
     <>
@@ -40,18 +41,25 @@ const portfolio = () => {
             <div className="section-title">
               <h2>Portfolio</h2>
               <p>My Projects</p>
+              {/* <button onClick={addData}>Add</button> */}
             </div>
 
             <div className="row portfolio-container">
               {projectData.map((project) => (
                 <Link
-                  href={`/projects/${project.fields.projectSlug.stringValue}`}
+                  href={{
+                    pathname: "/projects/[name]",
+                    query: { name: project.fields.projectSlug.stringValue },
+                  }}
+                  // href={`/projects/${project.fields.projectSlug.stringValue}`}
                   className="col-lg-4 col-md-6 portfolio-item filter-app"
                   key={project.createTime}
                 >
                   <div className="portfolio-wrap">
                     <img
-                      src={project.fields.fileLocation.stringValue}
+                      src={
+                        project.fields.projectImages.mapValue.fields.default.mapValue.fields.storageUrl.stringValue
+                      }
                       className="img-fluid"
                       alt="Project Image"
                       width="800"
@@ -60,32 +68,33 @@ const portfolio = () => {
                     <div className="portfolio-info">
                       <h4>{project.fields.projectTitle.stringValue}</h4>
                       <p>{project.fields.projectType.stringValue}</p>
-                      <div className="portfolio-links">
-                        <a
-                          href={project.fields.projectGithubLink.stringValue}
-                          className="portfolio-lightbox"
-                          title="Github Link"
-                        >
-                          <i>
-                            <BsGithub />
-                          </i>
-                        </a>
-                        {project.fields.projectLink ? (
-                          <a
-                            href={project.fields.projectLink.stringValue}
-                            data-gallery="portfolioDetailsGallery"
-                            data-glightbox="type: external"
-                            className="portfolio-details-lightbox"
-                            title="Live Link "
-                          >
-                            <i>
-                              <BsLink45Deg />
-                            </i>
-                          </a>
-                        ) : (
-                          <></>
-                        )}
-                      </div>
+                      {/*projects/fir-project-19b32/databases/(default)/documents/projects_updated/79S8UnHsVVd3TaKQhoRi*/}
+                      {/*<div className="portfolio-links">*/}
+                      {/*  <a*/}
+                      {/*    href={project.fields.projectGithubLink.stringValue}*/}
+                      {/*    className="portfolio-lightbox"*/}
+                      {/*    title="Github Link"*/}
+                      {/*  >*/}
+                      {/*    <i>*/}
+                      {/*      <BsGithub />*/}
+                      {/*    </i>*/}
+                      {/*  </a>*/}
+                      {/*  {project.fields.projectLink ? (*/}
+                      {/*    <a*/}
+                      {/*      href={project.fields.projectLink.stringValue}*/}
+                      {/*      data-gallery="portfolioDetailsGallery"*/}
+                      {/*      data-glightbox="type: external"*/}
+                      {/*      className="portfolio-details-lightbox"*/}
+                      {/*      title="Live Link "*/}
+                      {/*    >*/}
+                      {/*      <i>*/}
+                      {/*        <BsLink45Deg />*/}
+                      {/*      </i>*/}
+                      {/*    </a>*/}
+                      {/*  ) : (*/}
+                      {/*    <></>*/}
+                      {/*  )}*/}
+                      {/*</div>*/}
                     </div>
                   </div>
                 </Link>
@@ -95,7 +104,7 @@ const portfolio = () => {
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default portfolio;
+export default portfolio

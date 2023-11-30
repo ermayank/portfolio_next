@@ -1,61 +1,145 @@
-import Image from "next/image";
-import { React, useEffect, useState } from "react";
-import { FaGithub, FaVideo, FaExternalLinkAlt } from "react-icons/fa";
-import { useRouter } from "next/router";
+import Image from "next/image"
+import { useEffect, useState } from "react"
+import { FaGithub, FaVideo, FaExternalLinkAlt } from "react-icons/fa"
+import { useRouter } from "next/router"
+import { db } from "../../../firebase/clientApp"
+import { collection, query, where, getDocs } from "firebase/firestore"
+import Loading from "../../components/utils/LoadingUtil"
+import { v4 as uuidv4 } from "uuid"
+import Link from "next/link"
 
 const PortfolioDetails = () => {
-  const router = useRouter();
+  const router = useRouter()
+  const projectSlug = router.query.name
+
+  const [project, setProject] = useState([])
+  const [isLoading, setLoading] = useState(true)
+
+  const fetchTheProject = async () => {
+    const collectionRef = collection(db, "projects_updated")
+    try {
+      const q = query(collectionRef, where("projectSlug", "==", projectSlug))
+      const querySnapshot = await getDocs(q)
+      const projectDetail = querySnapshot.docs.map((doc) => doc.data())
+      return projectDetail
+
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  useEffect(() => {
+    if (projectSlug) {
+      try {
+        fetchTheProject().then((data) => {
+          setProject(data[0])
+          setLoading(false)
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }, [projectSlug])
+
+  if (isLoading)
+    return (
+      <>
+        <Loading></Loading>
+      </>
+    )
+  if (!project) return <p>No Project Data</p>
+
   return (
     <>
       <div className="portfolio-details page-container">
         <div className="container">
           <div className="section-title">
-            <h2>About</h2>
-            <p>{router.query.name}</p>
+            <h2>Here it is </h2>
+            {/* <p>{router.query.name}</p> */}
           </div>
 
           <div className="row">
             <div className="col-lg-6 project-image">
-              <Image
-                src={"/img/me_about.png"}
-                alt="Picture of the mayank gupta"
-                className="img-fluid"
-                width="400"
-                height="400"
-              />
+              <div className="row">
+                <Image
+                  src={project.projectImages.default.storageUrl}
+                  alt={project.projectImages.default.altText}
+                  className="img-fluid"
+                  width="700"
+                  height="500"
+
+                />
+              </div>
+              <div className="row additional_files interests">
+                <h3>Additional Files</h3>
+
+                {project.additionalFiles ? (
+                  project.additionalFiles.map((file) => (
+                    <div className="additional_file_div" key={uuidv4()}>
+                      <Link
+                        href={file.fileLink}
+                        target="parent"
+                        className="remove_link_decoration "
+                      >
+                        <div className="icon-box">{file.fileName}</div>
+                      </Link>
+                    </div>
+                  ))
+                ) : (
+                  <p>Sorry nothing more exciting For this Project</p>
+                )}
+              </div>
             </div>
             <div className="col-lg-6 project-description">
-              <h3 className="resume-title">Eventy</h3>
-              <p>An Event Management System</p>
+              <h3 className="resume-title">{project.projectTitle}</h3>
+              <p>{project.projectDetailTagline}</p>
               <hr></hr>
 
               <div className="interests row">
                 {/* Github */}
                 <div className="col">
-                  <div className="icon-box">
-                    <i style={{ color: "#ffffff" }}>
-                      <FaGithub />
-                    </i>
-                    <h3>Code</h3>
-                  </div>
+                  <Link
+                    href={project.projectLinks.github}
+                    className="project_details_page_link"
+                    target="parent"
+                  >
+                    <div className="icon-box">
+                      <i style={{ color: "#ffffff" }}>
+                        <FaGithub />
+                      </i>
+                      <h3>Code</h3>
+                    </div>
+                  </Link>
                 </div>
                 {/* Live Link */}
                 <div className="col">
-                  <div className="icon-box">
-                    <i style={{ color: "#ffffff" }}>
-                      <FaExternalLinkAlt />
-                    </i>
-                    <h3>Live Preview</h3>
-                  </div>
+                  <Link
+                    href={project.projectLinks.liveLink}
+                    className="project_details_page_link"
+                    target="parent"
+                  >
+                    <div className="icon-box">
+                      <i style={{ color: "#ffffff" }}>
+                        <FaExternalLinkAlt />
+                      </i>
+                      <h3>Live Preview</h3>
+                    </div>
+                  </Link>
                 </div>
                 {/* Watch Preview */}
                 <div className="col">
-                  <div className="icon-box">
-                    <i style={{ color: "#18d26e" }}>
-                      <FaVideo />
-                    </i>
-                    <h3>Watch Demo</h3>
-                  </div>
+                  <Link
+                    href={project.projectLinks.videoLink}
+                    className="project_details_page_link"
+                    target="parent"
+                  >
+                    <div className="icon-box">
+                      <i style={{ color: "#18d26e" }}>
+                        <FaVideo />
+                      </i>
+                      <h3>Watch Demo</h3>
+                    </div>
+                  </Link>
                 </div>
               </div>
 
@@ -63,49 +147,24 @@ const PortfolioDetails = () => {
               <h4>Technologies Used</h4>
 
               <ul className="project-technologies">
-                <li>Javascript</li>
-                <li>Mongo</li>
-                <li>Express</li>
-                <li>Docker</li>
-                <li>mayank gupta</li>
-
-                <li>asdf</li>
-                <li>asdfghjk</li>
-                <li>Docker</li>
+                {project.projectTechnologies.map((tech) => (
+                  <li key={uuidv4()}>{tech}</li>
+                ))}
               </ul>
               <h4>Description</h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </p>
+              <p>{project.projectDescription}</p>
               <h4>Details</h4>
               <ul>
-                <li>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </li>
-                <li>
-                  It has survived not only five centuries, but also the leap
-                  into electronic typesetting, remaining essentially unchanged.
-                </li>
-                <li>
-                  It was popularised in the 1960s with the release of Letraset
-                  sheets containing Lorem Ipsum passages, and more recently with
-                  desktop publishing software like Aldus PageMaker including
-                  versions of Lorem Ipsum
-                </li>
+                {project.projectDetailPoints.map((point) => (
+                  <li key={uuidv4()}>{point}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PortfolioDetails;
+export default PortfolioDetails

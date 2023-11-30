@@ -1,14 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import links from "../../staticData/links.json";
-import { color, motion } from "framer-motion";
+import Head from "next/head"
+import Image from "next/image"
+import links from "../../staticData/links.json"
+import { color, motion } from "framer-motion"
 
 import {
   SiJavascript,
   SiMongodb,
   SiTypescript,
   SiFirebase,
-} from "react-icons/si";
+} from "react-icons/si"
 import {
   FaNodeJs,
   FaReact,
@@ -17,10 +17,10 @@ import {
   FaJava,
   FaLinux,
   FaWordpress,
-} from "react-icons/fa";
-import { DiGit } from "react-icons/di";
+} from "react-icons/fa"
+import { DiGit } from "react-icons/di"
 
-import Link from "next/link";
+import Link from "next/link"
 
 const fadeInAnimationVariants = {
   initial: {
@@ -31,17 +31,17 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
   },
-};
+}
 
 export default function About() {
-  let currentAge;
-  const year = new Date().getFullYear();
-  const month = new Date().getMonth();
+  let currentAge
+  const year = new Date().getFullYear()
+  const month = new Date().getMonth()
 
   if (month <= 8) {
-    currentAge = year - 1998 - 1;
+    currentAge = year - 1998 - 1
   } else {
-    currentAge = year - 1998;
+    currentAge = year - 1998
   }
   return (
     <>
@@ -52,7 +52,7 @@ export default function About() {
           content="About mayank gupta and his intrestes"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/*<Link rel="icon" href="/favicon.ico" />*/}
       </Head>
 
       {/* <!-- ======= About Section ======= --> */}
@@ -185,28 +185,20 @@ export default function About() {
                 <h3>Node.js</h3>
               </div>
             </div>
+
             <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <motion.div
-                className="icon-box"
-                variants={fadeInAnimationVariants}
-                initial="initial"
-                animate="animate"
-                whileInView="animate"
-                // viewport={{
-                //   once: true,
-                // }}
-              >
+              <div className="icon-box">
                 <i style={{ color: "#61DBFB" }}>
                   <FaReact />
                 </i>
                 <h3>React</h3>
-              </motion.div>
+              </div>
             </div>
             <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
               <motion.div
                 className="icon-box"
                 whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
+                whileTap={{ scale: 0.8 }}
                 transition={{
                   ease: "linear",
                   duration: 0,
@@ -288,13 +280,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      {/* <!-- End Interests --> */}
-
-      {/* <!-- ======= Testimonials ======= --> */}
-
-      {/* <!-- End Testimonials  --> */}
-      {/* </section> */}
-      {/* <!-- End About Section --> */}
     </>
-  );
+  )
 }
