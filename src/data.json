@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "projectTitle": "Eventy",
+      "additionalFiles": [
+        {
+          "fileLink": "https://firebasestorage.googleapis.com/v0/b/fir-project-19b32.appspot.com/o/eventy_presentation.pdf?alt=media&token=85625e40-90a5-4a8a-8aa0-0d641b0161e5",
+          "fileName": "presentation"
+        }
+      ],
+      "projectDescription": "Eventy is the web application tool for organizing the successful event. Managing the event is the arduous responsibility irrespective of the event type. Along with that it is crucial to gather important feedback from the attendee to analyze the principal elements for future references. Event feeds enhance audience engagement and make the event a trend. This can be accomplished by putting event management systems into practice that can tackle complexities with ease. Our overall goal is to create an event management and survey system that makes things easy for organizers as well attendees. This will make sure that the users have the appropriate level of knowledge and details about your objectives of the event. It will eventually help to eliminate the chances of missing any important events and provide easy accessibility of event information.",
+      "projectDetailPoints": [
+        "Easy accessibility of event information for attendees so that they can register for the event of their choice effortlessly",
+        "Collecting qualitative data in the form of feedback from the attendee for a post event survey."
+      ],
+      "projectDetailTagline": "Event Management System",
+      "projectImages": {
+        "default": {
+          "storageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-project-19b32.appspot.com/o/eventy_default.png?alt=media&token=bc071b10-611a-4970-8d8b-16b9ad1eca94",
+          "altText": "Eventy Project Landing Page"
+        },
+        "supportingImages": [
+          {
+            "storageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-project-19b32.appspot.com/o/eventy_support_1.png?alt=media&token=5be167ac-de9e-4c3c-84cf-77ad84159221",
+            "altText": "Eventy Project Event Page"
+          },
+          {
+            "storageUrl": "https://firebasestorage.googleapis.com/v0/b/fir-project-19b32.appspot.com/o/eventy_support_2.png?alt=media&token=de5445e0-c5c8-4244-bded-71adaf4ffbcc",
+            "altText": "Eventy Project Register Page"
+          }
+        ]
+      },
+
+      "projectLinks": {
+        "github": "https://github.com/ermayank/eventy",
+        "liveLink": "#",
+        "videoLink": "#"
+      },
+      "projectTechnologies": [
+        "ExpressJS",
+        "MongoDB",
+        "NodeJS",
+        "ReactJS",
+        "Docker",
+        "AWS",
+        "Github Actions"
+      ],
+      "projectSlug": "eventy-event-management-system",
+      "projectType": "Web Application"
+    }
+  ]
+}
