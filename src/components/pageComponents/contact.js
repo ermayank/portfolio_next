@@ -51,19 +51,19 @@ const contact = () => {
                   </i>
                   <h3>Social Profiles</h3>
                   <div className="social-links">
-                    <Link href={links.linkedin} title="Linkedin">
+                    <Link href={links.linkedin} title="Linkedin" rel="nofollow">
                       <BsLinkedin />
                     </Link>
-                    <Link href={links.github} title="Github">
+                    <Link href={links.github} title="Github" rel="nofollow">
                       <BsGithub />
                     </Link>
-                    <Link href={links.instagram} title="Instagram">
+                    <Link href={links.instagram} title="Instagram" rel="nofollow">
                       <BsInstagram />
                     </Link>
-                    <Link href={links.facebook} title="Facebook">
+                    <Link href={links.facebook} title="Facebook" rel="nofollow">
                       <BsFacebook />
                     </Link>
-                    <Link href={links.twitter} title="Twitter">
+                    <Link href={links.twitter} title="Twitter" rel="nofollow">
                       <BsTwitter />
                     </Link>
                   </div>

@@ -61,14 +61,16 @@ const PortfolioDetails = () => {
           <div className="row">
             <div className="col-lg-6 project-image">
               <div className="row">
+
                 <Image
                   src={project.projectImages.default.storageUrl}
                   alt={project.projectImages.default.altText}
                   className="img-fluid"
                   width="700"
                   height="500"
-
+                  priority={true}
                 />
+
               </div>
               <div className="row additional_files interests">
                 <h3>Additional Files</h3>
@@ -117,6 +119,7 @@ const PortfolioDetails = () => {
                     href={project.projectLinks.liveLink}
                     className="project_details_page_link"
                     target="parent"
+
                   >
                     <div className="icon-box">
                       <i style={{ color: "#ffffff" }}>

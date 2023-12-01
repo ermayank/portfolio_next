@@ -16,10 +16,12 @@ const Footer = () => {
           <footer className="py-5">
             <div className="row">
               <div className="col-md-7 mb-3 mx-auto">
+
+
                 <form>
                   <h5>Subscribe to my newsletter</h5>
                   <p>
-                    Monthly digest of what's new and exciting going on in tech.
+                    Digest of what's new and exciting going on in technology.
                   </p>
                   <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                     <label htmlFor="newsletter1" className="visually-hidden">
@@ -43,17 +45,17 @@ const Footer = () => {
               <p>© {year} Mayank Gupta. All rights reserved.</p>
               <ul className="list-unstyled d-flex social-links">
                 <li className="ms-3">
-                  <Link href={links.linkedin} title="linkedin">
+                  <Link href={links.linkedin} title="linkedin" rel="nofollow">
                     <BsLinkedin />
                   </Link>
                 </li>
                 <li className="ms-3">
-                  <Link href={links.linkedin} title="linkedin">
+                  <Link href={links.github} title="Github" rel="nofollow">
                     <BsGithub />
                   </Link>
                 </li>
                 <li className="ms-3">
-                  <Link href={links.linkedin} title="linkedin">
+                  <Link href={links.instagram} title="Instagram" rel="nofollow">
                     <BsInstagram />
                   </Link>
                 </li>
