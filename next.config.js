@@ -1,18 +1,20 @@
 /** @type {import('next').NextConfig} */
-// import { join } from "path"
+
 import path from "path"
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
 
 const nextConfig = {
-  reactStrictMode: true,
-  sassOptions: {
-    // includePaths: [path.join(__dirname, "styles")],
-  },
-  env: {
-    BASE_URL: process.env.BASE_URL,
-  },
-  images: {
-    domains: ["firebasestorage.googleapis.com"],
-  },
+    reactStrictMode: true,
+    sassOptions: {
+        includePaths: [path.join(__dirname, "styles")],
+    },
+    images: {
+        domains: ["firebasestorage.googleapis.com"],
+        unoptimized:true,
+    },
 }
 
 export default nextConfig

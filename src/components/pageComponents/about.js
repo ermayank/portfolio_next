@@ -1,5 +1,6 @@
+'use client';
 import Head from "next/head"
-import Image from "next/image"
+import Image from 'next/image'
 import links from "../../staticData/links.json"
 import { color, motion } from "framer-motion"
 
@@ -66,16 +67,19 @@ export default function About() {
 
           <div className="row">
             <div className="col-lg-4" data-aos="fade-right">
-              <Image
-                src={"/img/me_about.png"}
-                alt="Picture of the mayank gupta"
-                className="img-fluid"
-                width="600"
-                height="680"
-              />
+              <img src={"/img/me_about.png"} width="600" height="680" alt="Picture of the mayank gupta" className="img-fluid" priority></img>
+              {/* <Image*/}
+              {/*  src="/img/me_about.png"*/}
+              {/*  alt="Picture of the mayank gupta"*/}
+              {/*  className="img-fluid"*/}
+              {/*  width="600"*/}
+              {/*  height="680"*/}
+              {/*  priority*/}
+              {/*/> */}
             </div>
 
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              {/*<h3>Full Stack Software Developer</h3>*/}
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                 <h3>Full Stack Software Developer</h3>
               </motion.div>
@@ -127,7 +131,7 @@ export default function About() {
                 I am a passionate FullStack Software Development Engineer with
                 hands-on experience in creating web applications in personal,
                 academic and professional environments using Agile
-                methodologies. I'm also familiar with AWS cloud practices with
+                methodologies. I&apos;m also familiar with AWS cloud practices with
                 sufficient knowledge of cloud technologies. While I was enrolled
                 in the Master of Engineering in Gina Cody School of Computing
                 program at Concordia University, Montreal, Canada. I worked on
@@ -153,8 +157,8 @@ export default function About() {
                 and end-users alike.
               </p>
               <p>
-                Please don't hesitate to contact me over the over the platform
-                you love and I'll try to get back to you as soon as possible.
+                Please don&apos;t hesitate to contact me over the over the platform
+                you love and I&apos;ll try to get back to you as soon as possible.
               </p>
             </div>
           </div>

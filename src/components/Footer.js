@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
@@ -21,7 +22,7 @@ const Footer = () => {
                 <form>
                   <h5>Subscribe to my newsletter</h5>
                   <p>
-                    Digest of what's new and exciting going on in technology.
+                    Digest of what&apos;s new and exciting going on in technology.
                   </p>
                   <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                     <label htmlFor="newsletter1" className="visually-hidden">

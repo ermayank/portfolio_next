@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import React from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
@@ -13,7 +14,7 @@ import { FaThumbsUp } from "react-icons/fa";
 
 import links from "../../staticData/links.json";
 import { useForm, ValidationError } from "@formspree/react";
-const contact = () => {
+const Contact = () => {
   const [state, handleSubmit] = useForm("mdopqozl");
 
   if (state.succeeded) {
@@ -199,4 +200,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
