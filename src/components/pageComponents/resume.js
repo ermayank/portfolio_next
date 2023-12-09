@@ -1,3 +1,4 @@
+'use client';
 import React from "react"
 import resumeData from "../../staticData/experience.json"
 import educationData from "../../staticData/education.json"
@@ -35,13 +36,7 @@ const resume = () => {
                     rel="nofollow"
                     target="parent"
                   >
-                    <Image
-                      src={edu.logo.image_link}
-                      alt={edu.logo.alt_text}
-                      className="img-fluid"
-                      width={edu.logo.width}
-                      height={edu.logo.height}
-                    />
+                    <img src={edu.logo.image_link} alt={edu.logo.alt_text} className="img-fluid" width={edu.logo.width} height={edu.logo.height}/>
                   </Link>{" "}
                   <em className="institute-name">
                     {edu.institution}, {edu.location}
@@ -71,7 +66,7 @@ const resume = () => {
                     {exp.startDate} - {exp.endDate}
                   </h5>
                   <p></p>
-                  <Image
+                  <img
                     src={exp.logo.image_link}
                     alt={exp.logo.alt_text}
                     className="img-fluid"

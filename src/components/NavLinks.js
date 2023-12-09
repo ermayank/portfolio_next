@@ -1,8 +1,10 @@
+"use client"
 import React, { useState } from "react"
 import Link from "next/link"
 import { HiExternalLink, HiMenu } from "react-icons/hi"
 import { ImCross } from "react-icons/im"
 const NavLinks = () => {
+  "use client"
   const [styleUsed, setStyleUsed] = useState("navbar")
   const [currentIcon, setCurrentIcon] = useState("desktop")
 

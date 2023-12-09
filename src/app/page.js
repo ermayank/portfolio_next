@@ -4,7 +4,7 @@ import links from "../staticData/links.json"
 
 import About from "../components/pageComponents/about.js"
 import Resume from "../components/pageComponents/resume"
-import Portfolio from "./projects"
+import Portfolio from "./projects/page.js"
 import Contact from "../components/pageComponents/contact"
 import Footer from "@/components/Footer"
 
@@ -57,7 +57,7 @@ export default function Home() {
       <About />
       <Resume />
       <Portfolio />
-      {/* <Loading /> */}
+      {/*/!* <Loading /> *!/*/}
       <Contact />
       <Footer />
     </>
