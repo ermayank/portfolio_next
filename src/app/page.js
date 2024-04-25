@@ -18,11 +18,21 @@ export default function Home() {
         <title>Mayank Gupta</title>
         <meta
           name="description"
-          content="Het to know more about Mayank Gupta and his journey so far...."
+          content="Get to know more about Mayank Gupta and his journey so far...."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Link rel="icon" href="/favicon.ico" />
+          {/*/!*Google tag (gtag.js) *!/*/}
+          {/*<script strategy="afterInactive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>*/}
+          {/*<script strategy="afterInactive">*/}
+          {/*    window.dataLayer = window.dataLayer || [];*/}
+          {/*    function gtag(){dataLayer.push(arguments)}*/}
+          {/*    gtag('js', new Date());*/}
+          {/*    gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});*/}
+          {/*</script>*/}
+
       </Head>
+
+
 
       {/* <!-- ======= Header ======= --> */}
       <header id="header">
@@ -60,6 +70,7 @@ export default function Home() {
       {/*/!* <Loading /> *!/*/}
       <Contact />
       <Footer />
+
     </>
   )
 }
