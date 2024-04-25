@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Software Developer",
       "startDate": "July 2023",
-      "endDate": "Present",
+      "endDate": "March 2024",
       "company": "Avid Technology",
       "location": "Montreal, CA",
       "logo": {
@@ -14,8 +14,8 @@
         "alt_text": "Avid Company Logo"
       },
       "description": [
-        "Crafting and developing scalable user mobile applications using flutter.",
-        "Developing backend scalable microservices using Nodejs, Typescript, Docker and graphql."
+        "Developed and collaborated more than 50 features in cross platform mobile application using Flutter framework for handling media and tenants in media and broadcasting workflows.",
+        "Created backend scalable microservices using Nodejs, Typescript, Docker and graphql."
       ]
     },
     {
@@ -32,7 +32,7 @@
         "alt_text": "Kaloom Company Logo"
       },
       "description": [
-        "Working on Kaloom Test Framework (KTF) for creating test cases, live monitoring for running test cases for the product on test systems.",
+        "Worked on Kaloom Test Framework (KTF) for creating test cases, live monitoring for running test cases for the product on test systems.",
         "Created multiple views for the real time visualisation for Internal Test Framework using Vue.js, Node.js and MongoDB and TypeScript.",
         "Designed and developed views for the dashing library in Docker Containerized Architecture environment by fetching data using RESTful APIs."
       ]
@@ -52,7 +52,6 @@
       },
       "description": [
         "Designed and implemented scalable APIs and background workers for managing first- and third-party proprietary licenses using NodeJS, Firebase Functions, and other cloud technologies that serve thousands of requests daily.",
-        "Reduced the loading time of website by 30% by removing unused assets.",
         "Automated and optimized business logic for the Advertisement Platform using salable cloud technologies on AWS.",
         "Coordinated team of 5 individuals to develop the server architecture and increased Google Page Speed score to 98/100 and optimised product for search engines."
       ]
