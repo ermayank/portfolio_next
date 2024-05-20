@@ -67,7 +67,7 @@ export default function About() {
 
           <div className="row">
             <div className="col-lg-4" data-aos="fade-right">
-              <img src={"/img/me_about.png"} width="600" height="680" alt="Picture of the mayank gupta" className="img-fluid" priority></img>
+              <img src={"/img/me_about.png"} width="600" height="680" alt="Picture of the mayank gupta" className="img-fluid" priority={true.toString()}></img>
               {/* <Image*/}
               {/*  src="/img/me_about.png"*/}
               {/*  alt="Picture of the mayank gupta"*/}

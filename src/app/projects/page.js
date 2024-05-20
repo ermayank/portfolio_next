@@ -8,13 +8,9 @@ import { BsGithub, BsLink45Deg } from "react-icons/bs"
 // import addData from "../../../add_data.js"
 
 async function getAllProjects() {
-  // const collectionRef = collection(db, "projects_updated")
   try {
     const querySnapshot = await getDocs(collection(db, "projects_updated"));
-    // const q = query(collectionRef, where(true))
-    // const querySnapshot = await getDocs(q)
     const projectDetail = querySnapshot.docs.map((doc) => doc.data())
-    console.log(projectDetail)
     return projectDetail
 
   } catch (e) {
@@ -25,7 +21,6 @@ async function getAllProjects() {
 const Portfolio = async () => {
 
   const mayankProjectsData = await getAllProjects();
-  console.log(mayankProjectsData)
 
 
   return (
@@ -66,7 +61,7 @@ const Portfolio = async () => {
                       alt="Project Image"
                       width={800}
                       height={600}
-                      priority
+                      priority={true.toString()}
                     />
                     <div className="portfolio-info">
                       <h4>{project.projectTitle}</h4>
