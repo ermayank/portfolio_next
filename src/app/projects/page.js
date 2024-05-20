@@ -14,16 +14,8 @@ async function getAllProjects() {
     // const q = query(collectionRef, where(true))
     // const querySnapshot = await getDocs(q)
     const projectDetail = querySnapshot.docs.map((doc) => doc.data())
-    // console.log(projectDetail)
+    console.log(projectDetail)
     return projectDetail
-    //
-    // const querySnapshot = await getDocs(collection(db, "projects_updated"));
-    // querySnapshot.forEach((doc) => {
-    //   // doc.data() is never undefined for query doc snapshots
-    //   console.log(doc.id, " => ", doc.data());
-    // });
-
-
 
   } catch (e) {
     console.log(e)
@@ -31,47 +23,10 @@ async function getAllProjects() {
 }
 
 const Portfolio = async () => {
-  // const router = useRouter()
-  // const [loading, setLoading] = useState(true)
-  // const [projectData, setProjectData] = useState([])
-  // const collectionRef = collection(db, "projects_updated")
-  // try {
-  //   const querySnapshot = await getDocs(collection(db, "projects_updated"));
-  //   // const q = query(collectionRef, where(true))
-  //   // const querySnapshot = await getDocs(q)
-  //   const projectDetail = querySnapshot.docs.map((doc) => doc.data())
-  //   console.log(projectDetail)
-  //   setProjectData(projectDetail)
-  //   setLoading(false)
-  //   return projectDetail
-  //
-  // } catch (e) {
-  //   console.log(e)
-  // }
 
   const mayankProjectsData = await getAllProjects();
+  console.log(mayankProjectsData)
 
-
-  // const handleClick = (slug) => {
-  //   router.push(`/projects/${slug}`)
-  // }
-
-
-
-  // const fetchProjects = async () => {
-  //   // await new Promise((resolve) => setTimeout(resolve, 3000));
-  //   const url = process.env["NEXT_PUBLIC_URL"]
-  //   const res = await fetch(url)
-  //   const data = await res.json()
-  //   setProjectData(data.documents)
-  //   setLoading(false)
-  // }
-
-  //
-  // // eslint-disable-next-line react-hooks/rules-of-hooks
-  // useEffect(() => {
-  //   // fetchProjects()
-  // }, [])
 
   return (
     <>
