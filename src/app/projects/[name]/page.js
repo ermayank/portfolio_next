@@ -83,7 +83,7 @@ const PortfolioDetails = async({params}) => {
                   className="img-fluid"
                   width="700"
                   height="500"
-                  priority
+                  priority={true.toString()}
                 />
 
               </div>
