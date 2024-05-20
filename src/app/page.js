@@ -40,6 +40,7 @@ export default function Home() {
           <h1>
             <Link href="/">Mayank Gupta</Link>
           </h1>
+
           <h2>
             Coding Creativity, Crafting Solutions:{" "}
             <span>Explore My Digital Journey!</span>
@@ -59,6 +60,7 @@ export default function Home() {
             <Link href={links.playStore} title="Google Play Store ">
               <FaGooglePlay />
             </Link>
+
           </div>
         </div>
       </header>
