@@ -1301,3 +1301,49 @@ ul {
     }
   }
 }
+
+
+
+//Blog Styling
+.blog-page-heading{
+  h1{
+    font-weight:700;
+  }
+  margin-top: 3rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.blog-image {
+  img{
+    height: 80%;
+    width: auto;
+  }
+  margin: 2rem;
+  width: auto;
+  height: 45vh;
+  object-fit: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.blog-author-and-date{
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  //background: $color_10;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+
+
+}
+.blog-content{
+  padding: 3rem;
+color: white;
+  text-align: justify;
+}

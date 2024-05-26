@@ -79,7 +79,6 @@ export default function About() {
             </div>
 
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              {/*<h3>Full Stack Software Developer</h3>*/}
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                 <h3>Full Stack Software Developer</h3>
               </motion.div>
