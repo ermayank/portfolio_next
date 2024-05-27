@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 import links from "../staticData/links.json";
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import Script from "next/script";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -18,21 +19,30 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-7 mb-3 mx-auto">
 
-
+                  {/*<script async data-uid="6ed55f78b7" src="https://mayank-gupta.ck.page/6ed55f78b7/index.js"></script>*/}
                 <form>
                   <h5>Subscribe to my newsletter</h5>
                   <p>
                     Digest of what&apos;s new and exciting going on in technology.
                   </p>
                   <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label htmlFor="name" className="visually-hidden">
+                      Your Name
+                    </label>
+                    <input
+                        id="name"
+                        type="text"
+                        className="form-control"
+                        placeholder="Your name"
+                    />
                     <label htmlFor="newsletter1" className="visually-hidden">
                       Email address
                     </label>
                     <input
-                      id="newsletter1"
-                      type="text"
-                      className="form-control"
-                      placeholder="Email address"
+                        id="newsletter1"
+                        type="text"
+                        className="form-control"
+                        placeholder="Email address"
                     />
                     <button className="btn btn-success" type="button">
                       Subscribe
@@ -46,7 +56,7 @@ const Footer = () => {
               <p>© {year} Mayank Gupta. All rights reserved.</p>
               <ul className="list-unstyled d-flex social-links">
                 <li className="ms-3">
-                  <Link href={links.linkedin} title="linkedin" rel="nofollow">
+                <Link href={links.linkedin} title="linkedin" rel="nofollow">
                     <BsLinkedin />
                   </Link>
                 </li>

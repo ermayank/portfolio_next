@@ -4,24 +4,10 @@ import Image from 'next/image'
 import links from "../../staticData/links.json"
 import { color, motion } from "framer-motion"
 
-import {
-  SiJavascript,
-  SiMongodb,
-  SiTypescript,
-  SiFirebase,
-} from "react-icons/si"
-import {
-  FaNodeJs,
-  FaReact,
-  FaVuejs,
-  FaDocker,
-  FaJava,
-  FaLinux,
-  FaWordpress,
-} from "react-icons/fa"
-import { DiGit } from "react-icons/di"
+
 
 import Link from "next/link"
+import Interests from "@/components/Interests.js";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -62,7 +48,7 @@ export default function About() {
         <div className="about-me container">
           <div className="section-title">
             <h2>About</h2>
-            <p>Learn more about me</p>
+            <p className="section-desc">Learn more about me</p>
           </div>
 
           <div className="row">
@@ -79,7 +65,6 @@ export default function About() {
             </div>
 
             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              {/*<h3>Full Stack Software Developer</h3>*/}
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1.1 }}>
                 <h3>Full Stack Software Developer</h3>
               </motion.div>
@@ -103,10 +88,10 @@ export default function About() {
                       <strong>Languages:</strong>
                       <span>English, Hindi, Français (débutant)</span>
                     </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>
-                      <strong>City:</strong> <span>Montreal, CA</span>
-                    </li>
+                    {/*<li>*/}
+                    {/*  <i className="bi bi-chevron-right"></i>*/}
+                    {/*  <strong>City:</strong> <span>Montreal, CA</span>*/}
+                    {/*</li>*/}
                   </ul>
                 </div>
                 <div className="col-lg-6">
@@ -120,10 +105,10 @@ export default function About() {
                       <strong>Email:</strong>
                       <span>{links.email}</span>
                     </li>
-                    <li>
-                      <i className="bi bi-chevron-right"></i>
-                      <strong>Freelance:</strong> <span>Available</span>
-                    </li>
+                    {/*<li>*/}
+                    {/*  <i className="bi bi-chevron-right"></i>*/}
+                    {/*  <strong>Freelance:</strong> <span>Available</span>*/}
+                    {/*</li>*/}
                   </ul>
                 </div>
               </div>
@@ -166,123 +151,7 @@ export default function About() {
         {/* <!-- End About Me --> */}
 
         {/* <!-- ======= Interests ======= --> */}
-        <div className="interests container">
-          <div className="section-title">
-            <h2>Interests</h2>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-3 col-md-4">
-              <div className="icon-box">
-                <i style={{ color: "#ffbb2c" }}>
-                  <SiJavascript />
-                </i>
-
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div className="icon-box">
-                <i style={{ color: "#3C873A" }}>
-                  <FaNodeJs />
-                </i>
-                <h3>Node.js</h3>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-              <div className="icon-box">
-                <i style={{ color: "#61DBFB" }}>
-                  <FaReact />
-                </i>
-                <h3>React</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
-              <motion.div
-                className="icon-box"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.8 }}
-                transition={{
-                  ease: "linear",
-                  duration: 0,
-                }}
-                drag="x"
-                dragConstraints={{ left: -100, right: 100 }}
-              >
-                <i style={{ color: "#589636" }}>
-                  <SiMongodb />
-                </i>
-                <h3>MongoDB</h3>
-              </motion.div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#589636" }}>
-                  <FaVuejs />
-                </i>
-                <h3>Vue.js</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#0db7ed" }}>
-                  <FaDocker />
-                </i>
-                <h3>Docker</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#f89820" }}>
-                  <FaJava />
-                </i>
-                <h3>Java</h3>
-              </div>
-            </div>
-
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#007acc" }}>
-                  <SiTypescript />
-                </i>
-                <h3>TypeScript</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#F1502F" }}>
-                  <DiGit />
-                </i>
-                <h3>Git</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#FFFFFF" }}>
-                  <FaLinux />
-                </i>
-                <h3>Linux</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#00749C" }}>
-                  <FaWordpress />
-                </i>
-                <h3>Wordpress</h3>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 mt-4">
-              <div className="icon-box">
-                <i style={{ color: "#F5820D" }}>
-                  <SiFirebase />
-                </i>
-                <h3>Firebase</h3>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Interests></Interests>
       </div>
     </>
   )

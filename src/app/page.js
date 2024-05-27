@@ -10,6 +10,7 @@ import Footer from "@/components/Footer"
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs"
 import { FaGooglePlay } from "react-icons/fa"
+import { SiLeetcode } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -20,11 +21,8 @@ export default function Home() {
                   name="description"
                   content="Get to know more about Mayank Gupta and his journey so far...."
               />
-
-
               <meta name="viewport" content="width=device-width, initial-scale=1"/>
           </Head>
-
 
           {/* <!-- ======= Header ======= --> */}
           <header id="header">
@@ -40,17 +38,20 @@ export default function Home() {
                   {/* <HeaderIndex /> */}
 
                   <div className="social-links">
-                      <Link href={links.linkedin} title="Linkedin">
+                      <Link href={links.linkedin} title="Linkedin" rel={"nofollow"}>
                           <BsLinkedin/>
                       </Link>
-                      <Link href={links.github} title="Github">
+                      <Link href={links.github} title="Github" rel={"nofollow"}>
                           <BsGithub/>
                       </Link>
-                      <Link href={links.instagram} title="Instagram">
+                      <Link href={links.instagram} title="Instagram" rel={"nofollow"}>
                           <BsInstagram/>
                       </Link>
-                      <Link href={links.playStore} title="Google Play Store ">
+                      <Link href={links.playStore} title="Google Play Store" rel={"nofollow"}>
                           <FaGooglePlay/>
+                      </Link>
+                      <Link href={links.leetcode} title="LeetCode Profile" rel={"nofollow"}>
+                          <SiLeetcode/>
                       </Link>
 
                   </div>
