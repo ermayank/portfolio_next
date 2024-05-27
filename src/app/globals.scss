@@ -25,6 +25,7 @@ $background-color_4: rgba(255, 255, 255, 0.11);
 $background-color_5: black;
 $border-color_1: #18d26e;
 $border-top-color_1: #eee;
+$content-font-size: 1.1rem;
 
 /*--------------------------------------------------------------
 # General
@@ -485,8 +486,17 @@ section.section-show {
   }
   p {
     color: $color_1;
+    font-size: $content-font-size;
+    text-align: justify;
+  }
+  .section-desc {
+    font-size: 36px;
   }
 }
+.skills-heading {
+  color: $color_17;
+}
+
 ul {
   color: $color_1;
 }
@@ -527,7 +537,8 @@ ul {
       padding: 0;
       margin: 0;
       font-family: $font-family_2;
-      font-size: 14px;
+      font-size: $content-font-size;
+      text-align: justify;
     }
   }
 }
@@ -564,33 +575,51 @@ ul {
 .interests {
   .icon-box {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
     background: rgba(255, 255, 255, 0.08);
+    border-radius: 0.5rem;
     transition: ease-in-out 0.3s;
     i {
-      font-size: 32px;
+      font-size: 20px;
       padding-right: 10px;
       line-height: 1;
     }
-    h3 {
+    ul {
+      list-style: none;
+      display: inline;
+      padding-right: 1rem;
+      li {
+        margin: 0 0.2rem 0.5rem 0.2rem;
+        float: left;
+        border: 1px solid $color_17;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        &:hover {
+          background: $color_8;
+          color: $background-color_5;
+          cursor: pointer;
+        }
+      }
+    }
+    h2 {
       font-weight: 700;
-      margin: 0;
       padding: 0;
       line-height: 1;
-      font-size: 16px;
-      color: $color_1;
+      font-size: 1.5rem;
+      color: $color_15;
+      margin: 1rem;
     }
     &:hover {
       background: rgba(255, 255, 255, 0.12);
     }
   }
-}
-.intrests {
   p {
     color: $color_1;
   }
 }
+
 .testimonials {
   .testimonials-carousel {
     overflow: hidden;
@@ -694,6 +723,8 @@ ul {
     ul {
       padding-left: 20px;
       color: $color_1;
+      font-size: $content-font-size;
+      text-align: justify;
       li {
         padding-bottom: 10px;
       }
@@ -1155,6 +1186,7 @@ ul {
   }
 }
 .footer-container {
+  width: 100%;
   background-color: $background-color_5;
   h5 {
     color: $color_17;
@@ -1167,8 +1199,10 @@ ul {
   }
   button {
     color: $color_11;
+    background-color: $color_17;
   }
 }
+
 .loader {
   position: relative;
   display: flex;
@@ -1302,22 +1336,24 @@ ul {
   }
 }
 
-
-
 //Blog Styling
-.blog-page-heading{
-  h1{
-    font-weight:700;
+.blog-page-heading {
+  h1 {
+    font-weight: 700;
+    margin-top: 3rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    padding: 1rem;
   }
-  margin-top: 3rem;
   text-align: center;
   color: white;
   width: 100%;
 }
 .blog-image {
-  img{
+  img {
     height: 80%;
     width: auto;
+    margin-top: 2rem;
   }
   margin: 2rem;
   width: auto;
@@ -1327,23 +1363,39 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
-.blog-author-and-date{
-  text-align: center;
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  //background: $color_10;
-  font-weight: bolder;
+.blog-publish-details {
+  .blog-publish-details-icon {
+    color: $color_17;
+    margin: 1rem;
+  }
+  .blog-publish-details-text {
+    color: $color_1;
+  }
+  .blog-publish-details-item {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
   display: flex;
-  flex-direction: row;
-
-
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 0;
+  transform: translateX(120%);
 }
-.blog-content{
-  padding: 3rem;
-color: white;
-  text-align: justify;
+
+.blog-content {
+  p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.7;
+    text-align: justify;
+    width: 80%;
+    font-size: 1.2rem;
+    margin: auto auto 1rem;
+  }
+  padding: 2rem 4rem 2rem 4rem;
+  color: $color_1;
 }
