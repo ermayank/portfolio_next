@@ -1,7 +1,8 @@
-"use client"
 import Footer from "@/components/Footer"
 import { client } from "../../utils/sanityLib/client"
 import Link from "next/link"
+
+export const revalidate = 30 // revalidate every 30 seconds
 
 async function getBlogs() {
   const query = `

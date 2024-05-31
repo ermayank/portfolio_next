@@ -4,6 +4,8 @@ import Image from "next/image"
 import { PortableText } from "next-sanity"
 import Loading from "@/components/utils/LoadingUtil"
 
+export const revalidate = 30 // revalidate every 30 seconds
+
 const getSingleBlogData = async (slug) => {
   const query = `
   *[_type == "post" && slug.current == "${slug}"]{

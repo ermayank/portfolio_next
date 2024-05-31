@@ -7,6 +7,8 @@ import Loading from "../../../components/utils/LoadingUtil.js"
 import { v4 as uuidv4 } from "uuid"
 import Link from "next/link"
 
+export const revalidate = 30 // revalidate every 30 seconds
+
 async function getProject(projectSlug) {
   const collectionRef = collection(db, "projects_updated")
   try {
