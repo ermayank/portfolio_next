@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer"
 import { client } from "../../utils/sanityLib/client"
 import Link from "next/link"
+import NavLinks from "@/components/NavLinks"
 
 export const revalidate = 30 // revalidate every 30 seconds
 
@@ -21,6 +22,7 @@ const Blog = async () => {
   const blogs = await getBlogs()
   return (
     <>
+      <NavLinks></NavLinks>
       <div className="page-container">
         <div className="container">
           <div className="section-title">

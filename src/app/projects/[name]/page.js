@@ -3,9 +3,10 @@ import { FaGithub, FaVideo, FaExternalLinkAlt } from "react-icons/fa"
 // import { useRouter } from "next/router"
 import { db } from "@/firebase/clientApp.js"
 import { collection, query, where, getDocs } from "firebase/firestore"
-import Loading from "../../../components/utils/LoadingUtil.js"
 import { v4 as uuidv4 } from "uuid"
 import Link from "next/link"
+import { notFound } from "next/navigation"
+import NavLinks from "@/components/NavLinks"
 
 export const revalidate = 30 // revalidate every 30 seconds
 
@@ -24,6 +25,10 @@ async function getProject(projectSlug) {
 const PortfolioDetails = async ({ params }) => {
   const projectArray = await getProject(params.name)
   const project = projectArray[0]
+
+  if (!projectArray || !project) {
+    return notFound()
+  }
 
   return (
     <>
