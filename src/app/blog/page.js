@@ -1,5 +1,7 @@
+"use client"
 import Footer from "@/components/Footer"
-import { client } from "../../../sanity/lib/client"
+import { client } from "../../utils/sanityLib/client"
+import Link from "next/link"
 
 async function getBlogs() {
   const query = `
@@ -25,21 +27,27 @@ const Blog = async () => {
             {/* <p>{router.query.name}</p> */}
           </div>
           <div className="row">
-            {blogs.map((post) => (
-              <div className="col-lg-4 col-md-6 col-sm-6 mt-5">
-                <div className="post-card">
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    className="post-image"
-                  />
-                  <div className="post-content">
-                    <h3 className="post-title">{post.title}</h3>
-                    {/* <p className="post-text">{post.text}</p> */}
-                    <p className="post-date">{post.creationDate}</p>
-                    {/* <button>Read More</button> */}
+            {blogs.map((post, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6 col-sm-6 mt-5">
+                <Link
+                  href={`/blog/${post.currentSlug}`}
+                  target="parent"
+                  className="blog-card-link"
+                >
+                  <div className="post-card">
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      className="post-image"
+                    />
+                    <div className="post-content">
+                      <h3 className="post-title">{post.title}</h3>
+                      {/* <p className="post-text">{post.text}</p> */}
+                      <p className="post-date">{post.creationDate}</p>
+                      {/* <button>Read More</button> */}
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

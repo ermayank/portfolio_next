@@ -8,61 +8,20 @@ import { v4 as uuidv4 } from "uuid"
 import Link from "next/link"
 
 async function getProject(projectSlug) {
-    const collectionRef = collection(db, "projects_updated")
-    try {
-        const q = query(collectionRef, where("projectSlug", "==", projectSlug))
-        const querySnapshot = await getDocs(q)
-        const projectDetail = querySnapshot.docs.map((doc) => doc.data())
-        return projectDetail
-
-    } catch (e) {
-        console.log(e)
-    }
+  const collectionRef = collection(db, "projects_updated")
+  try {
+    const q = query(collectionRef, where("projectSlug", "==", projectSlug))
+    const querySnapshot = await getDocs(q)
+    const projectDetail = querySnapshot.docs.map((doc) => doc.data())
+    return projectDetail
+  } catch (e) {
+    console.log(e)
+  }
 }
 
-const PortfolioDetails = async({params}) => {
-    const projectArray = await getProject(params.name)
-    const project = projectArray[0]
-    // console.log(mayank)
-  // const router = useRouter()
-  // const projectSlug = router.query.name
-  //
-  // const [project, setProject] = useState([])
-  // const [isLoading, setLoading] = useState(true)
-  //
-  // const fetchTheProject = async () => {
-  //   const collectionRef = collection(db, "projects_updated")
-  //   try {
-  //     const q = query(collectionRef, where("projectSlug", "==", projectSlug))
-  //     const querySnapshot = await getDocs(q)
-  //     const projectDetail = querySnapshot.docs.map((doc) => doc.data())
-  //     return projectDetail
-  //
-  //   } catch (e) {
-  //     console.log(e)
-  //   }
-  // }
-  //
-  // useEffect(() => {
-  //   if (projectSlug) {
-  //     try {
-  //       fetchTheProject().then((data) => {
-  //         setProject(data[0])
-  //         setLoading(false)
-  //       })
-  //     } catch (error) {
-  //       console.log(error)
-  //     }
-  //   }
-  // }, [projectSlug])
-  //
-  // if (project == undefined)
-  //   return (
-  //     <>
-  //       <Loading></Loading>
-  //     </>
-  //   )
-  // if (!project) return <p>No Project Data</p>
+const PortfolioDetails = async ({ params }) => {
+  const projectArray = await getProject(params.name)
+  const project = projectArray[0]
 
   return (
     <>
@@ -76,7 +35,6 @@ const PortfolioDetails = async({params}) => {
           <div className="row">
             <div className="col-lg-6 project-image">
               <div className="row">
-
                 <img
                   src={project.projectImages.default.storageUrl}
                   alt={project.projectImages.default.altText}
@@ -85,7 +43,6 @@ const PortfolioDetails = async({params}) => {
                   height="500"
                   priority={true.toString()}
                 />
-
               </div>
               <div className="row additional_files interests">
                 <h3>Additional Files</h3>
@@ -134,7 +91,6 @@ const PortfolioDetails = async({params}) => {
                     href={project.projectLinks.liveLink}
                     className="project_details_page_link"
                     target="parent"
-
                   >
                     <div className="icon-box">
                       <i style={{ color: "#ffffff" }}>

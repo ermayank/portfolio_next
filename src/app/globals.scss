@@ -1386,16 +1386,28 @@ ul {
 }
 
 .blog-content {
-  p {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.7;
-    text-align: justify;
-    width: 80%;
-    font-size: 1.2rem;
-    margin: auto auto 1rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  text-align: justify;
+  font-size: 1.2rem;
+  margin: auto auto 1rem;
+
+  li::marker {
+    color: $color_17;
+    font-size: 25px;
   }
+  a {
+    color: $color_17;
+    text-decoration: none;
+    &:hover {
+      color: $color_13;
+      text-decoration: underline;
+    }
+  }
+
   padding: 2rem 4rem 2rem 4rem;
   color: $color_1;
+  overflow-wrap: break-word;
 }
 
 // Blog Page showing Posts
@@ -1407,16 +1419,17 @@ ul {
   display: flex;
   flex-direction: column;
   height: 100%;
+
   &:hover {
     color: $color_13;
     cursor: pointer;
-    border: 1px solid $color_13;
   }
 
   .post-image {
     width: 100%;
     height: 60%;
     width: 100%;
+    object-fit: cover;
   }
 
   .post-content {
@@ -1449,7 +1462,16 @@ ul {
     }
   }
 }
-
+.blog-card-link {
+  text-decoration: none !important;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}
 .post-row {
   border: 2px solid green;
   display: flex;
